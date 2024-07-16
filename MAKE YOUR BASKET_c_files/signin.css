@@ -1,0 +1,192 @@
+body{
+  background: url('file:///C:/Users/tippa/Downloads/pexels-sohail-nachiti-807598.jpg');
+justify-content: center;
+min-height: 90vh;
+align-items: center;
+display: flex;
+color: azure;
+background-size: cover;
+}
+#formdiv{
+border: 3px solid rgb(118, 58, 58);
+width: 410px;
+height: 404px;
+position: relative;
+border-color: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+backdrop-filter: blur(20px);
+box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#newform{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#para1{
+  font-size: 5vh;
+  background-color: rgb(57, 53, 88);
+ border-radius: 50px;
+ font-family: 'Times New Roman', Times, serif;
+}
+#inputs{
+  color: rgb(120, 201, 183);
+  text-decoration: none;
+  font-family: Arial;
+  padding: 5px 5px ;
+}
+.emclass{
+  position: relative;
+  width: 100%;
+  height: 50px;
+ 
+ 
+}
+#namebox{
+  color: rgb(12, 4, 11);
+  border: none;
+  border-bottom: 2px solid yellow;
+ width: 100%;
+ border-top: 50px;
+  background-color: transparent;
+  margin-left: 80px;
+  outline: none;
+  font-weight: 600;
+  font-size: 2vh;
+  padding-top: 0px;
+  
+  
+}
+#namebox:hover{
+  border: none;
+  border-bottom: 2px solid yellow;
+ width: 100%;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+#emailbox{
+  color: rgb(15, 6, 13);
+  border: none;
+  border-bottom: 2px solid yellow;
+ width: 100%;
+  background-color: transparent;
+  margin-left: 80px;
+  outline: none;
+  font-weight: 600;
+  font-size: 2vh;
+ padding-top: 9px;
+  
+  
+}
+#emailbox:hover{
+  border: none;
+  border-bottom: 2px solid yellow;
+ width: 100%;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+#passbox{
+  color: rgb(12, 4, 11);
+  border: none;
+  border-bottom: 2px solid yellow;
+ width: 100%;
+ border-top: 50px;
+  background-color: transparent;
+  margin-left: 80px;
+  outline: none;
+  font-weight: 600;
+  font-size: 2vh;
+  padding-top: 9px;
+}
+#passbox:hover{
+  border: none;
+  border-bottom: 2px solid yellow;
+ width: 100%;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.inlab{
+  color: aqua;
+  position: absolute;
+  margin-left: 0px;
+  top: 20px;
+  left: 0px;
+}
+
+#eminput{
+  top: 50%;
+  display: flex;
+
+}
+#passinput{
+  top: 50%;
+  display: flex;
+}
+.inbx input{
+
+  width: 100px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#rem-forgot{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.linkcls a{
+  text-decoration: none;
+  color: rgb(219, 196, 196);
+}
+#linkdiv2{
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#subbtn{
+background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+border-radius: .5rem;
+box-sizing: border-box;
+color: #FFFFFF;
+display: flex;
+font-size: 16px;
+justify-content: center;
+padding: 1rem 1.75rem;
+text-decoration: none;
+width: 100%;
+border: 0;
+cursor: pointer;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+#subbtn:hover {
+background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+@media (min-width: 768px) {
+#subbtn{
+  padding: 1rem 2rem;
+}}
+
+
+#checkbx{
+  accent-color: rgb(78, 206, 78);
+  cursor: pointer;
+}

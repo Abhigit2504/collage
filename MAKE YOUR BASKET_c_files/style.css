@@ -1,0 +1,174 @@
+
+
+.bg-gradient{
+    background-image: linear-gradient(120deg,#9fd6d2,#8fff53);
+}
+
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+
+ul li{
+    float: left;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    background-image: linear-gradient(90deg,#e1dbd8,#4d4081);
+    color: rgb(96, 90, 80);
+    box-shadow: 5px 3px 10px;
+    border-radius: 15px 15px 15px 15px;
+   margin: 4px;
+   text-align: center;
+ 
+   cursor: pointer;
+}
+
+ul li:hover{
+    background-image: linear-gradient(120deg,#70845f,#9fd06e);
+    border-radius: auto;
+    margin: 3px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: black;
+
+}
+#header{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgb(0,0,0.06);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: sticky;
+    top: 0%;
+    left: 0%;
+   
+}
+
+ul a{
+text-decoration: none;
+font-size: 16px;
+font-weight: 600;
+color: rgb(12, 12, 15);
+transition: 0.3s ease;
+
+}
+ul a:hover,ul a.active{
+    color: rgb(241, 216, 216);
+     border-width: 3px;
+    font-weight: 400;
+}
+
+
+
+#hero{
+background-image: url("file:///C:/Users/tippa/Downloads/hero1.jpg");
+height: 90vh;
+width: 90%;
+background-position: 25% 0%;
+background-size: cover;
+padding: 0 80px ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+
+}
+
+#hero h4{
+    padding: 15px;
+}
+#hero h1{
+    color: rgb(255, 255, 255);
+}
+#hero p{
+    color: #a9323e;
+}
+#hero button{
+   
+background-image: url("hero1.jpg");
+background-image: linear-gradient(100deg,#56b0a2,#0a234a);
+color: #32e700;
+border: 2px solid black;
+border-radius: 100px;
+padding: 14px 80px 14px 65px;
+cursor: pointer;
+background-repeat: no-repeat;
+font-weight: 700;
+font-size: 15px;
+
+    
+}
+
+#hero button:hover{
+    color: black;
+    background-image: linear-gradient(100deg,#56b0a2,#05ff1e);
+    transition: 0.3s ease;
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+#feature .fe-box{
+    width: 185px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0.3);
+    border-radius: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 10px rgba(87, 81, 216, 0.1);
+}
+#feature .fe-box h4{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 5px;
+    background-color: #8a9daa;
+}
+#feature .fe-box h4:hover{
+    box-shadow: 10px 10px 10px rgba(120, 115, 204, 0.1);
+}
+
+
+#feature .fe-box:nth-child(2) h4{
+    background-color: rgb(151, 155, 220);
+
+}
+#feature .fe-box:nth-child(3) h4{
+    background-color: rgb(46, 99, 88);
+
+}
+#feature .fe-box:nth-child(4) h4{
+    background-color: rgb(72, 166, 133);
+
+}
+#feature .fe-box:nth-child(5) h4{
+    background-color: rgb(101, 105, 178);
+
+}
+#feature .fe-box:nth-child(6) h4{
+    background-color: rgb(246, 6, 6);
+
+}
+
+
+   

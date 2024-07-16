@@ -1,0 +1,105 @@
+body{
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   background-image: linear-gradient(120deg,rgb(213, 156, 95),rgb(113, 212, 113));
+    color: rgb(246, 230, 230);
+
+}
+
+#header1{
+   background-color: rgb(18, 130, 65);
+   justify-content: center;
+   padding: 10px 10px 10px 10px;
+   text-align: center;
+   color: rgb(0, 0, 0);
+   border: 3px transparent;
+   border-radius: 10px;
+}
+
+.btcls{
+    color: rgb(243, 243, 243);
+    background-color: rgb(170, 173, 81);
+    border: none;
+    border-radius: 30px;
+    padding: 4px 7px;
+    margin-top: 5px;
+}
+.btcls:hover{
+    cursor: pointer;
+    color: aqua;
+    background-color: black;
+    transition: 0.3s ease;
+    padding: 5px 9px;
+
+}
+.btcls-alt{
+    cursor: pointer;
+    color: gold;
+    background-color: rgb(44,41,44);
+    border-radius: 30px;
+    border: none;
+    padding: 4px 7px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.btcls-alt:hover{
+    cursor: pointer;
+    color: rgb(44, 229, 229);
+    background-color: rgb(33, 32, 25);
+    transition: 0.3s ease;
+    padding: 5px 9px;
+}
+#startbtn{
+    padding: 5px 5px;
+    font-size: 20px;
+    border-radius: 6px;
+    box-shadow: 2px 12px 21px rgb(30, 46, 98);
+    background-color: darkcyan;
+}
+#startbtn:hover{
+    padding: 7px 7px;
+    font-size: 20px;
+    border-radius: 6px;
+    transform: translateX(-2px);
+    transform: translateY(-2px);
+    box-shadow: 2px 12px 21px rgb(19, 30, 67);
+    background-color: rgb(244, 248, 0);
+    color: rgb(0, 0, 0);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+#game-grids{
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3,70px);
+    grid-template-rows: repeat(3,70px);
+    justify-content: center;
+    gap: 0.3rem;
+}
+#game-grids li{
+
+        background-color:rgb(255, 255, 255);
+        border-radius: 2px;
+        color: black;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+ }
+
+
+#game-grids li:hover{
+    background-color: rgb(50, 164, 163);
+
+}
+
+#game-grids li.disabled{
+    background-color: cornflowerblue;
+    color: black;
+    cursor: default;
+}

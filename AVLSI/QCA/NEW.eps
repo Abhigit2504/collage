@@ -1,0 +1,294 @@
+%!PS-Adobe 3.0
+%%Pages: (atend)
+%%Orientation: Portrait
+%%BoundingBox: 0 0 612 792
+%%HiResBoundingBox: 0.000000 0.000000 612.000000 792.000000
+%........................................................
+%%Creator: QCADesigner
+%%EndComments
+%%BeginProlog
+/epsilon 0.1 def
+/nm { 2.363636 mul } def
+/labelfontsize 12 nm def
+
+% a b min
+/min
+  {
+  /b exch def
+  /a exch def
+
+  a b lt { a } { b } ifelse
+  } def
+
+% a b max
+/max
+  {
+  /b exch def
+  /a exch def
+
+  a b gt { a } { b } ifelse
+  } def
+
+/linewidth 0.1 nm 1 min def
+
+% (string) txt??
+/txtlt { gsave dup 0 -1 labelfontsize mul rmoveto show grestore } def
+/txtlm { gsave dup 0 labelfontsize 2 div -1 mul rmoveto show grestore } def
+/txtlb { gsave dup 0 0 rmoveto show grestore } def
+/txtct { gsave dup stringwidth exch 2 div -1 mul exch pop labelfontsize -1 mul rmoveto show grestore } def
+/txtcm { gsave dup stringwidth exch 2 div -1 mul exch pop labelfontsize 2 div -1 mul rmoveto show grestore } def
+/txtcb { gsave dup stringwidth pop 2 div -1 mul 0 rmoveto show grestore } def
+/txtrt { gsave dup stringwidth exch -1 mul exch pop labelfontsize -1 mul rmoveto show grestore } def
+/txtrm { gsave dup stringwidth exch -1 mul exch pop labelfontsize 2 div -1 mul rmoveto show grestore } def
+/txtrb { gsave dup stringwidth exch -1 mul exch pop 0 rmoveto show grestore } def
+1 setlinejoin
+1 setlinecap
+linewidth setlinewidth
+
+% x y cx cy r g b (label) QCADLabel
+/QCADLabel
+  {
+  gsave
+  /label exch def
+  /b exch def
+  /g exch def
+  /r exch def
+  /cy exch def
+  /cx exch def
+  /y exch def
+  /x exch def
+
+  newpath
+  x y moveto
+  x cx add y lineto
+  x cx add y cy sub lineto
+  x y cy sub lineto
+  closepath clip
+
+  r g b setrgbcolor
+
+
+  x y moveto
+  (Helvetica) findfont labelfontsize scalefont setfont
+  label txtlt
+  grestore
+  } def
+
+/point
+  {
+  /y exch def
+  /x exch def
+
+  newpath
+  x 3 sub y 3 sub moveto
+  x 3 add y 3 add lineto
+  x 3 sub y 3 add moveto
+  x 3 add y 3 sub lineto
+  stroke
+  }
+
+% x y cx cy dot_diam dot0_x dot0_y dot1_x dot1_y dot2_x dot2_y dot3_x dot3_y charge0_diam charge1_diam charge2_diam charge3_diam r g b mode QCADCell
+/QCADCell
+  {
+  gsave
+  /mode exch def
+  /b exch def
+  /g exch def
+  /r exch def
+  /charge3_diam exch def
+  /charge2_diam exch def
+  /charge1_diam exch def
+  /charge0_diam exch def
+  /dot3_y exch def
+  /dot3_x exch def
+  /dot2_y exch def
+  /dot2_x exch def
+  /dot1_y exch def
+  /dot1_x exch def
+  /dot0_y exch def
+  /dot0_x exch def
+  /dot_diam exch def
+  /cy exch def
+  /cx exch def
+  /y exch def
+  /x exch def
+
+  % Filler
+  newpath
+  x y moveto
+  x cx add y lineto
+  x cx add y cy sub lineto
+  x y cy sub lineto
+  x y lineto
+  mode 0 eq dot_diam epsilon gt and
+    {
+    dot0_x dot_diam 2 div add dot0_y moveto
+    dot0_x dot0_y dot_diam 2 div 0 360 arc
+    dot1_x dot_diam 2 div add dot1_y moveto
+    dot1_x dot1_y dot_diam 2 div 0 360 arc
+    dot2_x dot_diam 2 div add dot2_y moveto
+    dot2_x dot2_y dot_diam 2 div 0 360 arc
+    dot3_x dot_diam 2 div add dot3_y moveto
+    dot3_x dot3_y dot_diam 2 div 0 360 arc
+    }
+  if
+  r g b setrgbcolor
+  fill
+  grestore
+
+  linewidth epsilon gt
+    {
+    % Cell outline
+    newpath
+    x y moveto
+    x cx add y lineto
+    x cx add y cy sub lineto
+    x y cy sub lineto
+    closepath
+    stroke
+    }
+  if
+
+  gsave
+
+  mode 0 eq
+    {
+    linewidth epsilon gt
+      {
+      %dot0 outline
+      newpath
+      dot0_x dot0_y dot_diam 2 div 0 360 arc
+      closepath stroke
+
+      %dot1 outline
+      newpath
+      dot1_x dot1_y dot_diam 2 div 0 360 arc
+      closepath stroke
+
+      %dot2 outline
+      newpath
+      dot2_x dot2_y dot_diam 2 div 0 360 arc
+      closepath stroke
+
+      %dot3 outline
+      newpath
+      dot3_x dot3_y dot_diam 2 div 0 360 arc
+      closepath stroke
+      }
+    if
+
+    dot_diam epsilon gt
+      {
+      %dot0 charge
+      newpath
+      dot0_x dot0_y charge0_diam 2 div 0 360 arc
+      closepath fill
+
+      %dot1 charge
+      newpath
+      dot1_x dot1_y charge1_diam 2 div 0 360 arc
+      closepath fill
+
+      %dot2 charge
+      newpath
+      dot2_x dot2_y charge2_diam 2 div 0 360 arc
+      closepath fill
+
+      %dot3 charge
+      newpath
+      dot3_x dot3_y charge3_diam 2 div 0 360 arc
+      closepath fill
+      }
+    if
+    }
+    {
+    linewidth epsilon gt
+      {
+      mode 1 eq
+        {
+        % draw an X across the cell
+        newpath
+        x y moveto
+        x cx add y cy sub lineto
+        stroke
+
+        newpath
+        x cx add y moveto
+        x y cy sub lineto
+        stroke
+        }
+        {
+        % draw a circle
+        newpath
+        x cx 2 div add y cy 2 div sub cx 2 div 0 360 arc
+        closepath stroke
+        }
+      ifelse
+      } % linewidth epsilon gt
+    if
+    }
+  ifelse
+
+  grestore
+  } def
+
+%%EndProlog
+%%Page: 1 1
+%%BeginPageSetup
+/nmx { 159.000000 sub 0.000000 sub 0.000000 add 2.363636 mul 72.000000 add } def
+/nmy { 792.000000 exch 68.000000 sub 0.000000 sub 0.000000 add 2.363636 mul 72.000000 add sub } def
+%%EndPageSetup
+gsave
+%The margin
+newpath
+72.000000 72.000000 moveto
+72.000000 720.000000 lineto
+540.000000 720.000000 lineto
+540.000000 72.000000 lineto
+closepath eoclip
+319.000000 nmx 111.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 332.500000 nmx 115.500000 nmy 332.500000 nmx 124.500000 nmy 323.500000 nmx 124.500000 nmy 323.500000 nmx 115.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.000000 0 QCADCell
+299.000000 nmx 111.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 312.500000 nmx 115.500000 nmy 312.500000 nmx 124.500000 nmy 303.500000 nmx 124.500000 nmy 303.500000 nmx 115.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+279.000000 nmx 111.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 292.500000 nmx 115.500000 nmy 292.500000 nmx 124.500000 nmy 283.500000 nmx 124.500000 nmy 283.500000 nmx 115.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+259.000000 nmx 111.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 272.500000 nmx 115.500000 nmy 272.500000 nmx 124.500000 nmy 263.500000 nmx 124.500000 nmy 263.500000 nmx 115.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+239.000000 nmx 111.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 252.500000 nmx 115.500000 nmy 252.500000 nmx 124.500000 nmy 243.500000 nmx 124.500000 nmy 243.500000 nmx 115.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.660000 0.660000 0.000000 0 QCADCell
+  239.000000 nmx 88.000000 nmy 34.000000 nm 22.000000 nm 0.659998 0.659998 0.000000 (A<B) QCADLabel
+339.000000 nmx 131.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 352.500000 nmx 135.500000 nmy 352.500000 nmx 144.500000 nmy 343.500000 nmx 144.500000 nmy 343.500000 nmx 135.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.000000 0 QCADCell
+339.000000 nmx 151.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 352.500000 nmx 155.500000 nmy 352.500000 nmx 164.500000 nmy 343.500000 nmx 164.500000 nmy 343.500000 nmx 155.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.210000 0.390000 0.700000 0 QCADCell
+  339.000000 nmx 128.000000 nmy 14.000000 nm 22.000000 nm 0.209995 0.389990 0.699992 (A) QCADLabel
+339.000000 nmx 191.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 352.500000 nmx 195.500000 nmy 352.500000 nmx 204.500000 nmy 343.500000 nmx 204.500000 nmy 343.500000 nmx 195.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.000000 0 QCADCell
+339.000000 nmx 211.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 352.500000 nmx 215.500000 nmy 352.500000 nmx 224.500000 nmy 343.500000 nmx 224.500000 nmy 343.500000 nmx 215.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.000000 0 QCADCell
+319.000000 nmx 211.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 332.500000 nmx 215.500000 nmy 332.500000 nmx 224.500000 nmy 323.500000 nmx 224.500000 nmy 323.500000 nmx 215.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+299.000000 nmx 211.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 312.500000 nmx 215.500000 nmy 312.500000 nmx 224.500000 nmy 303.500000 nmx 224.500000 nmy 303.500000 nmx 215.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+279.000000 nmx 211.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 292.500000 nmx 215.500000 nmy 292.500000 nmx 224.500000 nmy 283.500000 nmx 224.500000 nmy 283.500000 nmx 215.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+259.000000 nmx 211.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 272.500000 nmx 215.500000 nmy 272.500000 nmx 224.500000 nmy 263.500000 nmx 224.500000 nmy 263.500000 nmx 215.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+239.000000 nmx 211.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 252.500000 nmx 215.500000 nmy 252.500000 nmx 224.500000 nmy 243.500000 nmx 224.500000 nmy 243.500000 nmx 215.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.660000 0.660000 0.000000 0 QCADCell
+  239.000000 nmx 188.000000 nmy 34.000000 nm 22.000000 nm 0.659998 0.659998 0.000000 (A>B) QCADLabel
+279.000000 nmx 131.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 292.500000 nmx 135.500000 nmy 292.500000 nmx 144.500000 nmy 283.500000 nmx 144.500000 nmy 283.500000 nmx 135.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+279.000000 nmx 151.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 292.500000 nmx 155.500000 nmy 292.500000 nmx 164.500000 nmy 283.500000 nmx 164.500000 nmy 283.500000 nmx 155.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.210000 0.390000 0.700000 0 QCADCell
+  279.000000 nmx 146.000000 nmy 14.000000 nm 22.000000 nm 0.209995 0.389990 0.699992 (B) QCADLabel
+299.000000 nmx 191.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 312.500000 nmx 195.500000 nmy 312.500000 nmx 204.500000 nmy 303.500000 nmx 204.500000 nmy 303.500000 nmx 195.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+299.000000 nmx 231.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 312.500000 nmx 235.500000 nmy 312.500000 nmx 244.500000 nmy 303.500000 nmx 244.500000 nmy 303.500000 nmx 235.500000 nmy 0.000000 nm 4.999999 nm 0.000000 nm 4.999999 nm 0.830000 0.440000 0.000000 0 QCADCell
+  288.000000 nmx 250.000000 nmy 54.000000 nm 22.000000 nm 0.829999 0.439994 0.000000 (-1.00) QCADLabel
+279.000000 nmx 91.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 292.500000 nmx 95.500000 nmy 292.500000 nmx 104.500000 nmy 283.500000 nmx 104.500000 nmy 283.500000 nmx 95.500000 nmy 0.000000 nm 4.999999 nm 0.000000 nm 4.999999 nm 0.830000 0.440000 0.000000 0 QCADCell
+  279.000000 nmx 68.000000 nmy 54.000000 nm 22.000000 nm 0.829999 0.439994 0.000000 (-1.00) QCADLabel
+339.000000 nmx 171.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 352.500000 nmx 175.500000 nmy 352.500000 nmx 184.500000 nmy 343.500000 nmx 184.500000 nmy 343.500000 nmx 175.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.000000 0 QCADCell
+299.000000 nmx 171.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 312.500000 nmx 175.500000 nmy 312.500000 nmx 184.500000 nmy 303.500000 nmx 184.500000 nmy 303.500000 nmx 175.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.000000 0 QCADCell
+259.000000 nmx 131.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 272.500000 nmx 135.500000 nmy 272.500000 nmx 144.500000 nmy 263.500000 nmx 144.500000 nmy 263.500000 nmx 135.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+219.000000 nmx 111.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 232.500000 nmx 115.500000 nmy 232.500000 nmx 124.500000 nmy 223.500000 nmx 124.500000 nmy 223.500000 nmx 115.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+219.000000 nmx 131.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 232.500000 nmx 135.500000 nmy 232.500000 nmx 144.500000 nmy 223.500000 nmx 144.500000 nmy 223.500000 nmx 135.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+219.000000 nmx 151.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 232.500000 nmx 155.500000 nmy 232.500000 nmx 164.500000 nmy 223.500000 nmx 164.500000 nmy 223.500000 nmx 155.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.500000 0 QCADCell
+219.000000 nmx 171.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 232.500000 nmx 175.500000 nmy 232.500000 nmx 184.500000 nmy 223.500000 nmx 184.500000 nmy 223.500000 nmx 175.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.500000 0 QCADCell
+219.000000 nmx 191.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 232.500000 nmx 195.500000 nmy 232.500000 nmx 204.500000 nmy 223.500000 nmx 204.500000 nmy 223.500000 nmx 195.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.500000 0 QCADCell
+219.000000 nmx 211.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 232.500000 nmx 215.500000 nmy 232.500000 nmx 224.500000 nmy 223.500000 nmx 224.500000 nmy 223.500000 nmx 215.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.500000 0.000000 0.500000 0 QCADCell
+239.000000 nmx 171.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 252.500000 nmx 175.500000 nmy 252.500000 nmx 184.500000 nmy 243.500000 nmx 184.500000 nmy 243.500000 nmx 175.500000 nmy 4.999999 nm 0.000000 nm 4.999999 nm 0.000000 nm 0.830000 0.440000 0.000000 0 QCADCell
+  239.000000 nmx 148.000000 nmy 44.000000 nm 22.000000 nm 0.829999 0.439994 0.000000 (1.00) QCADLabel
+199.000000 nmx 171.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 212.500000 nmx 175.500000 nmy 212.500000 nmx 184.500000 nmy 203.500000 nmx 184.500000 nmy 203.500000 nmx 175.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.500000 0 QCADCell
+179.000000 nmx 151.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 192.500000 nmx 155.500000 nmy 192.500000 nmx 164.500000 nmy 183.500000 nmx 164.500000 nmy 183.500000 nmx 155.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.000000 0.500000 0.500000 0 QCADCell
+159.000000 nmx 151.000000 nmy 18.000000 nm 18.000000 nm 5.000000 nm 172.500000 nmx 155.500000 nmy 172.500000 nmx 164.500000 nmy 163.500000 nmx 164.500000 nmy 163.500000 nmx 155.500000 nmy 2.500000 nm 2.500000 nm 2.500000 nm 2.500000 nm 0.660000 0.660000 0.000000 0 QCADCell
+  159.000000 nmx 128.000000 nmy 34.000000 nm 22.000000 nm 0.659998 0.659998 0.000000 (A=B) QCADLabel
+grestore
+showpage
+%%PageTrailer
+%%Trailer
+%%Pages: 1
+%%EOF
